@@ -1,0 +1,8 @@
+export const homeRoute = "/"
+export const productsRoute = "/products"
+export const blogRoute = "/blog"
+export const faqRoute = "/faq"
+export const contactsRoute = "/contacts"
+export const searchRoute = "/search"
+export const cartRoute = "/cart"
+export const profileRoute = "/profile"

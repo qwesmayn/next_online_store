@@ -1,6 +1,6 @@
-import type { Config } from "tailwindcss";
+// tailwind.config.js
 
-const config: Config = {
+const config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,13 +8,25 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      boxShadow: {
+        "gradient-header": "0px 0px 4px 0px #0C68F4",
+        "product-img-line": "0px 0px 4px 0px #444444",
+      },
+      textColor: {
+        sky: "#0C68F4",
+      },
+      animation: {
+        marquee: "marquee 20s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
     },
   },
   plugins: [],
 };
-export default config;
+
+module.exports = config;
